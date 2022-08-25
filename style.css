@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.card{
+    background-color: azure;
+    color: #000;
+    border-radius: 30px;
+    width: 100%;
+    margin: 30px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
