@@ -10,17 +10,39 @@
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" class = "search-bar">
+            <input type="text" class = "search-bar" value="delhi">
             <button>Search city</button>
         </div>
         <div class="weather">
             <h2 class="city">Weather in Denver</h2>
-            <img src="#####" alt="" class="icon">
             <div class="description">Cloudy</div>
-            <div class= "humidity">Hu midity 60%</div>
+            <div class= "humidity">Humidity 60%</div>
             <div class="wind-speed">wind-speed 6.2</div>
         </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script>
+let card = document.querySelector(".search-bar")
+let btn = document.querySelector("button")
+btn.addEventListener("click", function(){
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${card.value}&appid=7577d768f56e3583f237c63f8d7bcf7d`)
+    .then(response=>response.json())
+    .then(data=>
+    {
+        let result = ` <div class = "card"><h2 class = "city">Weather in ${card.value}</h2> 
+            <div class="temp">Temprature:  ${Math.floor(data["main"].temp-273)}°C</div>
+            <div class= "humidity">Humidty:  ${data["main"].humidity}</div>
+           
+            `
+        let weather = document.querySelector(".weather")
+        weather.innerHTML += result
+        console.log(data)
+    })
+    .catch(err =>{alert("City Not Valid")})
+
+})
+</script>
+<!-- <script src="script.js"></script> -->
 </html>
+
+<!-- <h1>temp = ${Math.floor(data["main"].temp-273)}C</h1> -->
