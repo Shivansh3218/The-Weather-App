@@ -1,28 +1,74 @@
 body{
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-image: url(a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .card{
-    background-color: azure;
+    /* background-color: azure; */
     padding: 20px;
     height: auto;
-    overflow: visible;
+    width: 100vh;
     color: #000;
     border-radius: 10px;
     width: auto;
+}
+.card:hover{
+    /* background-color: azure; */
+    transition: 0.5s;
+   
+}
+.search-bar{
+    padding: 10px;
+    border-radius: 10px;
+}
+.search-bar:hover{
+border: 3px solid rgb(165, 0, 0);
+transition: 1s;
 }
 .search{
     display: flex;
     align-items: center;
     justify-content:center;
+    
+ 
+}
+button{
+    background-color: rgb(223, 223, 223);
+    margin-left: 30px;
+    box-shadow: inset 1px 1px 10px 2px rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.6s;
+}
+button:hover{
+    background-color: rgb(80, 78, 75);
+    color: aliceblue;
 }
 p{
     font-size: xx-large;
     /* margin-top: -10px; */
 }
 h1{
-    /* margin-bottom: -30px; */
+    color: rgb(255, 255, 255);
+   
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.weather{
+    transition: 0.2s;
+    width: 250px;
+    background-color: rgb(24, 22, 22);
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
 }
