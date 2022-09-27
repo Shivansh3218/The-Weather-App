@@ -1,80 +1,75 @@
-body{
-    justify-content: center;
-    align-items: center;
-    background-image: url(/File/sunny.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  justify-content: center;
+  align-items: center;
+  background-image: url(/File/sunny.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.card{
-    /* background-color: azure; */
-    padding: 20px;
-    height: auto;
-    width: 100vh;
-    color: #000;
-    border-radius: 10px;
-    width: auto;
+.card {
+  /* background-color: azure; */
+  padding: 20px;
+  height: auto;
+  width: 100vh;
+  color: #000;
+  border-radius: 10px;
+  width: auto;
 }
-.card:hover{
-    /* background-color: azure; */
-    transition: 0.1s;
-   
+.card:hover {
+  /* background-color: azure; */
+  transition: 0.1s;
 }
-.search-bar{
-    padding: 10px;
-    border-radius: 10px;
-
+.search-bar {
+  padding: 10px;
+  border-radius: 10px;
 }
-.search-bar:hover{
-border: 3px solid rgb(255, 255, 255);
-transition: 1s;
+.search-bar:hover {
+  border: 3px solid rgb(255, 255, 255);
+  transition: 1s;
 }
-.search{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    
- 
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-button{
-    background-color: rgb(223, 223, 223);
-    margin-left: 30px;
-    box-shadow: inset 1px 1px 10px 2px rgb(50, 49, 49);
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    transition: 0.6s;
+button {
+  background-color: rgb(223, 223, 223);
+  margin-left: 30px;
+  box-shadow: inset 1px 1px 10px 2px rgb(50, 49, 49);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.6s;
 }
-button:hover{
-    background-color: rgb(80, 78, 75);
-    color: aliceblue;
+button:hover {
+  background-color: rgb(80, 78, 75);
+  color: aliceblue;
 }
-p{
-    font-size: xx-large;
-    /* margin-top: -10px; */
+p {
+  font-size: xx-large;
+  /* margin-top: -10px; */
 }
-h1{
-    color: rgb(255, 255, 255);
-   
+h1 {
+  color: rgb(255, 255, 255);
 }
-.box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.weather{
-    transition: 0.2s;
-    width: 250px;
-    background-color: rgb(24, 22, 22);
-    color: white;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
+.weather {
+  transition: 0.2s;
+  width: 250px;
+  background-color: rgb(24, 22, 22);
+  color: white;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
 }
-.weather:hover{
-    translate: 10px 10px ;
-    transition: 1s;
-    background-color: rgb(43, 0, 0);
-    color: white;
+.weather:hover {
+  translate: 10px 10px;
+  transition: 1s;
+  background-color: rgb(43, 0, 0);
+  color: white;
 }
