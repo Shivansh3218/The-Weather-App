@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,43 @@
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
+
 <body>
     <h1>THE WEATHER APP </h1>
     <div class="card">
         <div class="search">
-            <input type="text" class = "search-bar" placeholder="Enter the city name" >
+            <input type="text" class="search-bar" placeholder="Enter the city name">
             <button>Search city</button>
         </div>
     </div>
     <div class="box"> </div>
-    
+
 </body>
 <script>
-let card = document.querySelector(".search-bar")
-let btn = document.querySelector("button")
-btn.addEventListener("click", function(){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${card.value}&appid=7577d768f56e3583f237c63f8d7bcf7d`)
-    .then(response=>response.json())
-    .then(data=>
-    {
-        let result = ` <div class = "weather"><h2 class = "city">Weather in ${(card.value).toUpperCase()}</h2> 
-            <div class="temp">Temprature:  ${Math.floor(data["main"].temp-273)}°C</div> <br>
+    let card = document.querySelector(".search-bar")
+    let btn = document.querySelector("button")
+    btn.addEventListener("click", function () {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${card.value}&appid=7577d768f56e3583f237c63f8d7bcf7d`)
+            .then(response => response.json())
+            .then(data => {
+                let result = ` <div class = "weather"><h2 class = "city">Weather in ${(card.value).toUpperCase()}</h2> 
+            <div class="temp">Temprature:  ${Math.floor(data["main"].temp - 273)}°C</div> <br>
             <div class= "humidity">Humidty:  ${data["main"].humidity}</div>
             <br>
             <div class= "Pressure">Pressure:  ${data["main"].pressure}</div>
             <br>
             <div class= "Weather">Weather:  ${data["weather"][0].description}</div>  
             `
-        let box = document.querySelector(".box")
-        box.innerHTML += result
-        console.log(data)
-        card.value =""
-    })
-    .catch(err =>{alert("City Not Valid")})
+                let box = document.querySelector(".box")
+                box.innerHTML += result
+                console.log(data)
+                card.value = ""
+            })
+            .catch(err => { alert("City Not Valid") })
 
-})
-let d = document.getElementsByClassName("Weather")[0]
+    })
+    let d = document.getElementsByClassName("Weather")[0]
 
 </script>
-</html>
 
+</html>
